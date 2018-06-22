@@ -8,7 +8,7 @@ This repo is a placeholder to maintain EtMDB REST API Postman Collection. See up
 
 Please follow this tutorial to import this [Postman Collection](https://www.getpostman.com/docs/collections).
 
-![Postman](./etmdbt-api-postman-collection.png)
+![Postman](.Images/etmdb-api-postman-collection.JPG)
 
 ##Keys used in APIs:
 - CLIENT_ID
