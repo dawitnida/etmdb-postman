@@ -1,0 +1,4795 @@
+{
+  "info": {
+    "_postman_id": "b2735b27-4e85-4c48-9013-dab6871c7dba",
+    "name": "EtMDB REST API v1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "05828989-a418-4fa6-8225-74d14c7c51bc",
+      "name": "Cinema",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "9593a45e-0818-411b-b4a3-d1230bfb4c94",
+          "name": "Add new cinema to the database",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://etmdb.com/api/v1/cinema/add/",
+            "description": "Add new cinema to the database"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "158bdb5c-3bcf-4954-aed1-ba76c9328e6b",
+          "name": "Retrieve cinema instance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema/detail/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema",
+                "detail",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Retrieve cinema instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "e69eefd4-dc25-4a56-8fc3-e3816e11974a",
+          "name": "List all cinemas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema/list/?page={{page}}&page_size={{page_size}}",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema",
+                "list",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "{{page}}"
+                },
+                {
+                  "key": "page_size",
+                  "value": "{{page_size}}"
+                }
+              ]
+            },
+            "description": "List all cinemas"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ff234144-4a34-4b85-b43c-f554db9a2875",
+          "name": "Return cinema search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema/search/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema",
+                "search",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Return cinema search result\n\n### Response Class (Status 200)\n\n* __{id}__: Used as a key to search cinemas,\n\nFor more details on how cinemas are listed [see here][ref].\n[ref]: https://etmdb.com/en/cinema-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "a0d8c385-fa4b-497c-9b02-7d0d33baef15",
+          "name": "Update cinema instance",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update cinema instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "47cf5949-7b62-4ab0-a1ae-d40ad6ceaacf",
+          "name": "Update cinema instance",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update cinema instance"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "083b301f-854a-4fd1-88d4-83882a558922",
+      "name": "Cinema details",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "f97014f8-9840-4808-93f6-5bae7363561c",
+          "name": "Add cinema details to a cinema instance",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://etmdb.com/api/v1/cinema-detail/add/",
+            "description": "Add cinema details to a cinema instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "a3f8e629-076a-455f-bc81-218d0d5ae347",
+          "name": "Return cinema details search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema-detail/search/:cinema_name",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema-detail",
+                "search",
+                ":cinema_name"
+              ],
+              "variable": [
+                {
+                  "key": "cinema_name",
+                  "value": "{{cinema_name}}"
+                }
+              ]
+            },
+            "description": "Return cinema details search result\n\n### Response Class (Status 200)\n\n* __{cinema_name}__: Used as a key word to search cinemas,\n\nFor more details on how cinemas are listed [see here][ref].\n[ref]: https://etmdb.com/en/cinema-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "4d8e4a71-2788-4c25-a3d7-111edebce210",
+          "name": "Update cinema details for a cinema instance",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema-detail/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema-detail",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update cinema details for a cinema instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "d044f782-38fd-448b-b3ff-ea21c0eddcd3",
+          "name": "Update cinema details for a cinema instance",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema-detail/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema-detail",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update cinema details for a cinema instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "aa971806-0ab9-4b07-b6e8-3ca4f626ffa2",
+          "name": "Retrieve details for a cinema instance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema-detail/detail/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema-detail",
+                "detail",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Retrieve details for a cinema instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "816e6ff2-5baf-4ca6-b241-059d2b90f4d1",
+          "name": "List all details of each cinema instances",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema-detail/list/?page={{page}}&page_size={{page_size}}",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema-detail",
+                "list",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "{{page}}"
+                },
+                {
+                  "key": "page_size",
+                  "value": "{{page_size}}"
+                }
+              ]
+            },
+            "description": "List all details of each cinema instances"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "942c82d4-dc27-41c5-8f26-13e074173696",
+      "name": "Company credits",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "ab927d4c-deba-4664-8573-1d7e8cfd663f",
+          "name": "Add new credit detail for a company",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://etmdb.com/api/v1/company-credits/add",
+            "description": "Add new credit detail for a company\n\n### Company credit choices\n\n* __1__: Production\n* __2__: Present\n* __3__: Cinematography\n* __4__: Post-production\n* __5__: Distribution\n* __6__: Marketing\n* __7__: Promotion"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1a927663-1082-494c-9a42-fa2dd2e02d1c",
+          "name": "Retrieve company credit details company instance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/company-credits/detail/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "company-credits",
+                "detail",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Retrieve company credit details company instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "d8e3bc8d-a4d7-4dce-a6b1-d2894b3424f6",
+          "name": "List all company credits for each company instances",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/company-credits/list?page={{page}}&page_size={{page_size}}",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "company-credits",
+                "list"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "{{page}}"
+                },
+                {
+                  "key": "page_size",
+                  "value": "{{page_size}}"
+                }
+              ]
+            },
+            "description": "List all company credits for each company instances"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "06390a60-4afd-42bc-89ae-eec8a568a67c",
+          "name": "Return company credits search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/company-credits/search/:movie_title",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "company-credits",
+                "search",
+                ":movie_title"
+              ],
+              "variable": [
+                {
+                  "key": "movie_title",
+                  "value": "{{movie_title}}"
+                }
+              ]
+            },
+            "description": "Return company credits search result\n\n### Response Class (Status 200)\n\n* __{movie_title}__: Used as a key word to search company credits for the movie\n* You can use both Amharic or English charset/font to search\n\nFor more details on how company credits are listed [see here][ref].\n[ref]: https://etmdb.com/en/movie-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "66c59874-061e-4091-a91a-4f9e598b9496",
+          "name": "Return company credits search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/company-credits/searchall/:param",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "company-credits",
+                "searchall",
+                ":param"
+              ],
+              "variable": [
+                {
+                  "key": "param",
+                  "value": "{{param}}"
+                }
+              ]
+            },
+            "description": "Return company credits search result\n\n### Response Class (Status 200)\n__{param}__ argument can be\n* company name\n* movie title or\n* company credit description (such as production, cinematography, etc)\n\nFor more details on how company credits are listed [see here][ref].\n[ref]: https://etmdb.com/en/company-list/company_name"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "3e1dbc1e-909f-4c67-9656-47d4c5fc7821",
+          "name": "Update company credit detail for a company instance",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/company-credits/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "company-credits",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update company credit detail for a company instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "836888d4-d16b-4def-bf7b-a626b75be316",
+          "name": "Update company credit detail for a company instance",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/company-credits/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "company-credits",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update company credit detail for a company instance"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "a2104851-2270-46ee-8a24-4dfddf73763d",
+      "name": "Cinema schedule-showtime",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "90510da3-4578-4faf-a7f4-ff111a60fd88",
+          "name": "Add cinema schedule and showtime instance",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://etmdb.com/api/v1/cinema-shedule-showtime/add/",
+            "description": "Add cinema schedule and showtime instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "42a188fe-29d0-4741-8821-6b5df86bba5e",
+          "name": "Retrieve cinema schedule and showtime instance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema-shedule-showtime/detail/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema-shedule-showtime",
+                "detail",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Retrieve cinema schedule and showtime instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "15d3dabf-ce42-4b5a-aeb9-8acf842c53af",
+          "name": "List all cinema schedule and showtime instances",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema-shedule-showtime/list/?page={{page}}&page_size={{page_size}}",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema-shedule-showtime",
+                "list",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "{{page}}"
+                },
+                {
+                  "key": "page_size",
+                  "value": "{{page_size}}"
+                }
+              ]
+            },
+            "description": "List all cinema schedule and showtime instances"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "40d6d6dc-cb14-4a4a-b3d3-0d5716c73d59",
+          "name": "Return cinema schedule and showtime search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema-shedule-showtime/search/:movie_title",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema-shedule-showtime",
+                "search",
+                ":movie_title"
+              ],
+              "variable": [
+                {
+                  "key": "movie_title",
+                  "value": "{{movie_title}}"
+                }
+              ]
+            },
+            "description": "Return cinema schedule and showtime search result\n\n### Response Class (Status 200)\n* __{movie_title}__: Used as a key word to search movie cast\n* You can use both Amharic or English charset/font to search\n\nFor more details about cinema schedule showtime, check each cinema from the cinema list [see here][ref].\n[ref]: https://etmdb.com/en/movie-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "37236317-55be-45e1-8e75-1cd43579c934",
+          "name": "Return cinema schedule and showtime search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "https://etmdb.com/api/v1/cinema-shedule-showtime/searchall/o",
+            "description": "Return cinema schedule and showtime search result\n\n### Response Class (Status 200)\n__{param}__ argument can be\n* movie title\n* cinema name\n* cinema hall name\n* showtime starting date\n* showtime ending date or\n* cinema technology\n\nFor more details about cinema schedule, check each cinema from the cinema list [see here][ref].\n[ref]: https://etmdb.com/en/movie-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "fcbd8a9d-cb5b-4e41-bb60-3707d8c3b0a5",
+          "name": "Update cinema schedule and showtime instance",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema-shedule-showtime/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema-shedule-showtime",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update cinema schedule and showtime instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "0484582f-ce6c-4ef8-933f-68854ad89175",
+          "name": "Update cinema schedule and showtime instance",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema-shedule-showtime/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema-shedule-showtime",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update cinema schedule and showtime instance"
+          },
+          "response": []
+        }
+      ],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "1d630d7e-3e73-488c-83bb-804c2c1e4733",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "d59dd597-9c76-4a21-b660-e7eb2d26bbb6",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_postman_id": "dbcb0f4b-64d1-4aa4-bc70-0b6e581161ff",
+      "name": "Account",
+      "description": "Get Account data",
+      "item": [
+        {
+          "_postman_id": "66c57b13-c7a1-4911-86a2-1452263174e2",
+          "name": "List Accounts",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": {
+                "accessToken": "Yn9LiDYKDUglnkO1TyGj0iBqqgBbPT",
+                "tokenType": "Bearer",
+                "addTokenTo": "header"
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "{{base_url}}/account/list?page={{page}}&page_size={{page_size}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "account",
+                "list"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "{{page}}",
+                  "equals": true
+                },
+                {
+                  "key": "page_size",
+                  "value": "{{page_size}}",
+                  "equals": true
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "auth": {
+        "type": "oauth2",
+        "oauth2": {
+          "accessToken": "zksIp2beu0jLARv1jToknXWzjeRPQm",
+          "tokenType": "Bearer",
+          "addTokenTo": "header"
+        }
+      }
+    },
+    {
+      "_postman_id": "f9085192-998c-4dce-81ba-1f44ba7aa08c",
+      "name": "Movies",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "811b6dce-7369-49b2-a943-7d3bc1a3f397",
+          "name": "List all movies",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": {
+                "accessToken": "Yn9LiDYKDUglnkO1TyGj0iBqqgBbPT",
+                "tokenType": "Bearer",
+                "addTokenTo": "header"
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "{{base_url}}/movie/list/?page={{page}}&page_size={{page_size}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "movie",
+                "list",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "{{page}}",
+                  "equals": true
+                },
+                {
+                  "key": "page_size",
+                  "value": "{{page_size}}",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "List all movies"
+          },
+          "response": [
+            {
+              "id": "592ec0da-170b-4d6c-a5e0-668ec7681fe5",
+              "name": "List all movies - Failed Authentication",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {},
+                "url": {
+                  "raw": "{{base_url}}/movie/list/?page={{page}}&page_size={{page_size}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "movie",
+                    "list",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "{{page}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "{{page_size}}",
+                      "equals": true
+                    }
+                  ]
+                }
+              },
+              "status": "UNAUTHORIZED",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Allow",
+                  "value": "GET, HEAD, OPTIONS",
+                  "name": "Allow",
+                  "description": "Valid actions for a specified resource. To be used for a 405 Method not allowed"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=432000, public",
+                  "name": "Cache-Control",
+                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive",
+                  "name": "Connection",
+                  "description": "Options that are desired for the connection"
+                },
+                {
+                  "key": "Content-Language",
+                  "value": "en",
+                  "name": "Content-Language",
+                  "description": "The language the content is in"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 14 Jun 2018 17:03:18 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Expires",
+                  "value": "Tue, 19 Jun 2018 17:03:18 GMT",
+                  "name": "Expires",
+                  "description": "Gives the date/time after which the response is considered stale"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=4, max=10",
+                  "name": "Keep-Alive",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "_etmdb=fb4mxfc4nqiav3acr4jhwts0s91ij6vx; Domain=.etmdb.com; HttpOnly; Path=/; Secure",
+                  "name": "Set-Cookie",
+                  "description": "an HTTP cookie"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "name": "Transfer-Encoding",
+                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept,Accept-Language,Authorization,Cookie",
+                  "name": "Vary",
+                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+                },
+                {
+                  "key": "WWW-Authenticate",
+                  "value": "Bearer realm=\"api\"",
+                  "name": "WWW-Authenticate",
+                  "description": "Indicates the authentication scheme that should be used to access the requested entity."
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY",
+                  "name": "X-Frame-Options",
+                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains",
+                  "name": "strict-transport-security",
+                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff",
+                  "name": "x-content-type-options",
+                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "1; mode=block",
+                  "name": "x-xss-protection",
+                  "description": "Cross-site scripting (XSS) filter"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Thu Jun 13 2019 16:47:53 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": true,
+                  "value": "B85CM1AylUX06oDzQa3pWSJtzjncDiru",
+                  "key": "csrftoken"
+                },
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": false,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "1",
+                  "key": "_hjIncludedInSample"
+                },
+                {
+                  "expires": "Sat Jun 13 2020 16:47:53 GMT+0000 (UTC)",
+                  "httpOnly": false,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "GA1.2.1475983273.1522440010",
+                  "key": "_ga"
+                },
+                {
+                  "expires": "Fri Jun 15 2018 16:47:53 GMT+0000 (UTC)",
+                  "httpOnly": false,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "GA1.2.1858714456.1528993817",
+                  "key": "_gid"
+                },
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": true,
+                  "value": "fb4mxfc4nqiav3acr4jhwts0s91ij6vx",
+                  "key": "_etmdb"
+                }
+              ],
+              "responseTime": null,
+              "body": "{\"detail\":\"Authentication credentials were not provided.\"}"
+            },
+            {
+              "id": "cf11a497-a37d-4909-ad8f-b4f8d592d490",
+              "name": "List all movies -Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {},
+                "url": {
+                  "raw": "{{base_url}}/movie/list/?page={{page}}&page_size={{page_size}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "movie",
+                    "list",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "{{page}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "{{page_size}}",
+                      "equals": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Allow",
+                  "value": "GET, HEAD, OPTIONS",
+                  "name": "Allow",
+                  "description": "Valid actions for a specified resource. To be used for a 405 Method not allowed"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=600, public",
+                  "name": "Cache-Control",
+                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive",
+                  "name": "Connection",
+                  "description": "Options that are desired for the connection"
+                },
+                {
+                  "key": "Content-Language",
+                  "value": "en",
+                  "name": "Content-Language",
+                  "description": "The language the content is in"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 14 Jun 2018 17:03:58 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Expires",
+                  "value": "Thu, 14 Jun 2018 17:12:37 GMT",
+                  "name": "Expires",
+                  "description": "Gives the date/time after which the response is considered stale"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=4, max=10",
+                  "name": "Keep-Alive",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "Last-Modified",
+                  "value": "Thu, 14 Jun 2018 17:02:37 GMT",
+                  "name": "Last-Modified",
+                  "description": "The last modified date for the requested object, in RFC 2822 format"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "_etmdb=9n4xelirus9mcztqls0c456n1stujr3k; Domain=.etmdb.com; HttpOnly; Path=/; Secure",
+                  "name": "Set-Cookie",
+                  "description": "an HTTP cookie"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "name": "Transfer-Encoding",
+                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept,Accept-Language,Authorization,Cookie",
+                  "name": "Vary",
+                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY",
+                  "name": "X-Frame-Options",
+                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains",
+                  "name": "strict-transport-security",
+                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff",
+                  "name": "x-content-type-options",
+                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "1; mode=block",
+                  "name": "x-xss-protection",
+                  "description": "Cross-site scripting (XSS) filter"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Thu Jun 13 2019 16:47:53 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": true,
+                  "value": "B85CM1AylUX06oDzQa3pWSJtzjncDiru",
+                  "key": "csrftoken"
+                },
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": false,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "1",
+                  "key": "_hjIncludedInSample"
+                },
+                {
+                  "expires": "Sat Jun 13 2020 16:47:53 GMT+0000 (UTC)",
+                  "httpOnly": false,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "GA1.2.1475983273.1522440010",
+                  "key": "_ga"
+                },
+                {
+                  "expires": "Fri Jun 15 2018 16:47:53 GMT+0000 (UTC)",
+                  "httpOnly": false,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "GA1.2.1858714456.1528993817",
+                  "key": "_gid"
+                },
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": true,
+                  "value": "9n4xelirus9mcztqls0c456n1stujr3k",
+                  "key": "_etmdb"
+                }
+              ],
+              "responseTime": null,
+              "body": "{\"status\":200,\"date\":\"2018-06-14 17:02:37\",\"data\":{\"count\":4,\"next\":null,\"previous\":null,\"results\":[{\"uuid\":\"6560675d76cba513efc8449ac2aac3378957f1ab6d3f1e18c58009bf0e05ebed\",\"created_date\":\"2017-03-25 14:13:44\",\"updated_date\":\"2017-08-29 09:09:42\",\"slug\":\"2-arenguade-termusoch\",\"movie_title\":\"2 Arenguade Termusoch\",\"release_date\":\"2015-08-01\",\"duration_minutes\":95,\"plot\":\"\u12a8\u120d\u1305\u1290\u1275 \u12a5\u1235\u12a8 \u12d5\u12cd\u1240\u1275 \u12a0\u1265\u122e \u12eb\u12f0\u1309 \u1201\u1208\u1275 \u1313\u12f0\u129b\u121e\u127d \u1260\u130b\u122b \u1235\u122b \u1260\u121a\u1230\u1229\u1260\u1275 \u130a\u12dc \u1260\u134d\u1245\u122d \u1205\u12ed\u12c8\u1273\u1278\u12cd \u12a5\u1293 \u1260\u12a0\u1235\u1270\u1233\u1230\u1263\u1278\u12cd \u12e8\u121a\u1348\u1320\u1228\u12cd\u1295 \u120d\u12ee\u1290\u1275 \u12e8\u121a\u12eb\u1235\u12a8\u1275\u1208\u12cd\u1295 \u12eb\u1233\u12eb\u120d\",\"field_trans\":\"\u12a0\u1228\u1295\u1313\u12f4 \u1320\u122d\u1219\u1236\u127d\",\"restriction\":\"PG-13 (Parents Strongly Cautioned)\",\"flag_inCinema\":false},{\"uuid\":\"549f4e21b62847333407f1b7617105eab6dfacd005ba265950b15a689efab457\",\"created_date\":\"2016-09-27 14:49:25\",\"updated_date\":\"2016-09-27 14:49:25\",\"slug\":\"2-lib\",\"movie_title\":\"2 Lib (\u136a \u120d\u1265)\",\"release_date\":\"2015-06-20\",\"duration_minutes\":91,\"plot\":\"\u1205\u120a\u1293 \u130c\u1273\u1278\u12cd \u1308\u1290\u1275 \u1295\u130b\u1271 \u12eb\u12e8\u122b\u12f5 \u121b\u121e \u12a0\u122d\u1234\u121b \u12a0\u1263\u12ed \u120c\u120e\u127d\u121d \u12e8\u1230\u1229\u1275 \u134a\u120d\u121d 2 \u120d\u1265 \u12a8\u12a0\u122d\u12f2 \u12a2\u1295\u1270\u122d\u1274\u12ed\u1218\u1295\u1275\",\"field_trans\":null,\"restriction\":\"G (General Audiences)\",\"flag_inCinema\":false},{\"uuid\":\"d57673508dfbe3e1275386144ebaf640e370eb0e8c392ea4bd9487e1bb9cda65\",\"created_date\":\"2016-09-27 19:06:50\",\"updated_date\":\"2016-09-27 19:06:50\",\"slug\":\"31\",\"movie_title\":\"3+1\",\"release_date\":\"2000-01-01\",\"duration_minutes\":91,\"plot\":\"\",\"field_trans\":null,\"restriction\":\"G (General Audiences)\",\"flag_inCinema\":false},{\"uuid\":\"6b34aa2eafecad6197ed7ddd2802b71bec0ae933c96541fed244ef8d6d01147c\",\"created_date\":\"2017-03-26 19:27:11\",\"updated_date\":\"2017-08-29 08:18:42\",\"slug\":\"300-shi\",\"movie_title\":\"300 shi \",\"release_date\":\"2011-07-01\",\"duration_minutes\":107,\"plot\":\"\u12a8\u12ee\u1295\u1268\u122d\u1235\u1272 \u12a0\u1295\u12f5 \u12a0\u1218\u1275 \u1235\u1208\u1270\u1240\u1321 \u1264\u1275 \u1270\u12a8\u122b\u12ed\u1270\u12cd \u12a0\u1295\u12f5\u120b\u12ed \u12e8\u121a\u1296\u1229 \u1275\u120d\u1245 \u1243\u120d\u12aa\u12f3\u1295 \u12eb\u120b\u1278\u12cd 3\u1275\u1313\u12f0\u129b\u121e\u127d \u12e8\u121a\u12eb\u130b\u1325\u121b\u1278\u12cd\u1295 \u12cd\u1323 \u12cd\u1228\u12f5 \u12eb\u1233\u12eb\u120d\",\"field_trans\":\"\u136b\u137b \u123a\",\"restriction\":\"G (General Audiences)\",\"flag_inCinema\":false}]}}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "cf36f1a2-366a-4fe2-8f80-4c95d975d4bb",
+          "name": "Retrieve movie instance",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": {
+                "accessToken": "XZczVy2AQCcnzORwNb1B7GAcrawY19",
+                "tokenType": "Bearer",
+                "addTokenTo": "header"
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "{{base_url}}/movie/detail/55",
+            "description": "Retrieve movie instance"
+          },
+          "response": [
+            {
+              "id": "cded0e69-9fca-4169-bdb9-4486bb1b2b53",
+              "name": "Retrieve movie instance-Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {},
+                "url": "https://etmdb.com/api/v1/movie/detail/55"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Allow",
+                  "value": "GET, HEAD, OPTIONS",
+                  "name": "Allow",
+                  "description": "Valid actions for a specified resource. To be used for a 405 Method not allowed"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=600, public",
+                  "name": "Cache-Control",
+                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive",
+                  "name": "Connection",
+                  "description": "Options that are desired for the connection"
+                },
+                {
+                  "key": "Content-Language",
+                  "value": "en",
+                  "name": "Content-Language",
+                  "description": "The language the content is in"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 14 Jun 2018 16:49:34 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Expires",
+                  "value": "Thu, 14 Jun 2018 16:59:34 GMT",
+                  "name": "Expires",
+                  "description": "Gives the date/time after which the response is considered stale"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=4, max=10",
+                  "name": "Keep-Alive",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "Last-Modified",
+                  "value": "Thu, 14 Jun 2018 16:49:34 GMT",
+                  "name": "Last-Modified",
+                  "description": "The last modified date for the requested object, in RFC 2822 format"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "_etmdb=pj7wwnb196e8fg0rr2oq8q61vs7uxy3m; Domain=.etmdb.com; HttpOnly; Path=/; Secure",
+                  "name": "Set-Cookie",
+                  "description": "an HTTP cookie"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "name": "Transfer-Encoding",
+                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept,Accept-Language,Authorization,Cookie",
+                  "name": "Vary",
+                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY",
+                  "name": "X-Frame-Options",
+                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains",
+                  "name": "strict-transport-security",
+                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff",
+                  "name": "x-content-type-options",
+                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "1; mode=block",
+                  "name": "x-xss-protection",
+                  "description": "Cross-site scripting (XSS) filter"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Thu Jun 13 2019 16:47:53 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": true,
+                  "value": "B85CM1AylUX06oDzQa3pWSJtzjncDiru",
+                  "key": "csrftoken"
+                },
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": true,
+                  "value": "pj7wwnb196e8fg0rr2oq8q61vs7uxy3m",
+                  "key": "_etmdb"
+                },
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": false,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "1",
+                  "key": "_hjIncludedInSample"
+                },
+                {
+                  "expires": "Sat Jun 13 2020 16:47:53 GMT+0000 (UTC)",
+                  "httpOnly": false,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "GA1.2.1475983273.1522440010",
+                  "key": "_ga"
+                },
+                {
+                  "expires": "Fri Jun 15 2018 16:47:53 GMT+0000 (UTC)",
+                  "httpOnly": false,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "GA1.2.1858714456.1528993817",
+                  "key": "_gid"
+                }
+              ],
+              "responseTime": null,
+              "body": "{\"date\":\"2018-06-14 16:49:34\",\"data\":{\"results\":{\"uuid\":\"908f65f5c04170341cdbb32809f22ea6260c8af102003b222b03fce50977a192\",\"created_date\":\"2017-03-26 19:15:53\",\"updated_date\":\"2017-08-29 10:36:12\",\"slug\":\"aredibo\",\"movie_title\":\"Aredibo\",\"release_date\":\"2015-01-01\",\"duration_minutes\":100,\"plot\":\"\u12a5\u1205\u1271\u1295 \u1208\u121b\u1233\u12a8\u121d \u12f0\u134b \u1240\u1295 \u1232\u120d \u12e8\u121a\u12c8\u12f3\u1275\u1295 \u1234\u1275 \u12eb\u1323 \u1230\u12cd  \u1205\u12ed\u12c8\u1275 \u12e8\u1230\u1325\u127d\u12cd\u1295 \u12a5\u12f5\u120d \u12a5\u1231 \u12a5\u1293 \u1313\u12f0\u129b\u12cd \u1208\u1218\u1320\u1240\u121d \u12e8\u121a\u12eb\u12f0\u122d\u1308\u12cd\u1295 \u12eb\u1233\u12eb\u120d\",\"field_trans\":\"\u12a0\u122d\u12f2\u1266\",\"restriction\":\"G (General Audiences)\",\"flag_inCinema\":false}},\"status\":200}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "4d0efbce-b776-4e8c-971a-627095335b1f",
+          "name": "Update movie instance",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": {
+                "accessToken": "XZczVy2AQCcnzORwNb1B7GAcrawY19",
+                "tokenType": "Bearer",
+                "addTokenTo": "header"
+              }
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{base_url}}/movie/update/2",
+            "description": "Update movie instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "3685ac46-1f36-4ba8-bf63-edbf9d698630",
+          "name": "Return movie search result",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": {
+                "accessToken": "XZczVy2AQCcnzORwNb1B7GAcrawY19",
+                "tokenType": "Bearer",
+                "addTokenTo": "header"
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "{{base_url}}/movie/search/e",
+            "description": "Return movie search result\n\n### Response Class (Status 200)\n\n* __{movie_title}__: Used as a key word to search movies\n* You can use both Amharic or English charset/font to search\n\nFor more details on how movies are listed [see here][ref].\n[ref]: https://etmdb.com/en/movie-list/-updated_date"
+          },
+          "response": [
+            {
+              "id": "ccfc0446-ee36-462a-8fbf-e7e1a8a2ee26",
+              "name": "Return movie search result -Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {},
+                "url": "{{base_url}}/movie/search/a"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Allow",
+                  "value": "GET, HEAD, OPTIONS",
+                  "name": "Allow",
+                  "description": "Valid actions for a specified resource. To be used for a 405 Method not allowed"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "max-age=600, public",
+                  "name": "Cache-Control",
+                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive",
+                  "name": "Connection",
+                  "description": "Options that are desired for the connection"
+                },
+                {
+                  "key": "Content-Language",
+                  "value": "en",
+                  "name": "Content-Language",
+                  "description": "The language the content is in"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 14 Jun 2018 17:05:52 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Expires",
+                  "value": "Thu, 14 Jun 2018 17:15:52 GMT",
+                  "name": "Expires",
+                  "description": "Gives the date/time after which the response is considered stale"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=4, max=10",
+                  "name": "Keep-Alive",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "Last-Modified",
+                  "value": "Thu, 14 Jun 2018 17:05:52 GMT",
+                  "name": "Last-Modified",
+                  "description": "The last modified date for the requested object, in RFC 2822 format"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "_etmdb=4jfk2gmhmc4xy1voyk6gnzim9eiik763; Domain=.etmdb.com; HttpOnly; Path=/; Secure",
+                  "name": "Set-Cookie",
+                  "description": "an HTTP cookie"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "name": "Transfer-Encoding",
+                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept,Accept-Language,Authorization,Cookie",
+                  "name": "Vary",
+                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY",
+                  "name": "X-Frame-Options",
+                  "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains",
+                  "name": "strict-transport-security",
+                  "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff",
+                  "name": "x-content-type-options",
+                  "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "1; mode=block",
+                  "name": "x-xss-protection",
+                  "description": "Cross-site scripting (XSS) filter"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Thu Jun 13 2019 16:47:53 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": true,
+                  "value": "B85CM1AylUX06oDzQa3pWSJtzjncDiru",
+                  "key": "csrftoken"
+                },
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": false,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "1",
+                  "key": "_hjIncludedInSample"
+                },
+                {
+                  "expires": "Sat Jun 13 2020 16:47:53 GMT+0000 (UTC)",
+                  "httpOnly": false,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "GA1.2.1475983273.1522440010",
+                  "key": "_ga"
+                },
+                {
+                  "expires": "Fri Jun 15 2018 16:47:53 GMT+0000 (UTC)",
+                  "httpOnly": false,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "GA1.2.1858714456.1528993817",
+                  "key": "_gid"
+                },
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "etmdb.com",
+                  "path": "/",
+                  "secure": true,
+                  "value": "4jfk2gmhmc4xy1voyk6gnzim9eiik763",
+                  "key": "_etmdb"
+                }
+              ],
+              "responseTime": null,
+              "body": "{\"count\":2,\"next\":null,\"previous\":null,\"results\":[{\"uuid\":\"492cbdafc2c2252c39c01465450460c33d012f72e4c4eae0fe9fcd4b672e7576\",\"created_date\":\"2016-08-28 16:31:32\",\"updated_date\":\"2016-08-28 16:31:32\",\"slug\":\"hgawi-gabcha\",\"movie_title\":\"Hgawi Gabcha (\u1205\u130b\u12ca \u130b\u1265\u127b)\",\"release_date\":\"2016-03-12\",\"duration_minutes\":91,\"plot\":\"We do not have full information about this movie, Please send us on our  <a href= \\\"https://www.facebook.com/etmdb/\\\">Facebook </a>page or by email to info@etmdb.com<br/>\\r\\n\\r\\n\\r\\n<a href= \\\"https://etmdb.com\\\"><b>Let's write our movie history together</b></a>\",\"field_trans\":null,\"restriction\":\"G (General Audiences)\",\"flag_inCinema\":false},{\"uuid\":\"aa42fb758661f346a5ec71e651bcabb049e775faad7228343f23514dbf3123c0\",\"created_date\":\"2016-08-28 16:33:13\",\"updated_date\":\"2016-08-28 16:33:13\",\"slug\":\"hiyab\",\"movie_title\":\"Hiyab (\u1205\u12eb\u1265)\",\"release_date\":\"2016-03-28\",\"duration_minutes\":91,\"plot\":\"We do not have full information about this movie, Please send us on our  <a href= \\\"https://www.facebook.com/etmdb/\\\">Facebook </a>page or by email to info@etmdb.com<br/>\\r\\n\\r\\n\\r\\n<a href= \\\"https://etmdb.com\\\"><b>Let's write our movie history together</b></a>\",\"field_trans\":null,\"restriction\":\"G (General Audiences)\",\"flag_inCinema\":false}]}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "2468f671-3db5-44fe-a5c1-ebfcb9f7b2e3",
+          "name": "Update movie instance",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/movie/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "movie",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update movie instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1eb89867-3140-49ac-8a41-eb112b6642f0",
+          "name": "Add new movie to the database",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://etmdb.com/api/v1/movie/add/",
+            "description": "Add new movie to the database"
+          },
+          "response": []
+        }
+      ],
+      "auth": {
+        "type": "noauth"
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "cdbb8b89-e845-4e3c-b88d-febacd581f3b",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "78793dff-5f78-4fca-b592-9ee721ca7843",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_postman_id": "baa6e999-b3ba-4b73-a385-af57832c92ac",
+      "name": "Watchlist",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "a6922a98-4505-478f-b5ff-5b5fd49523bb",
+          "name": "Update watchlist instance of a user",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/watchlist/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "watchlist",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update watchlist instance of a user"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "bf4e91e1-f409-40c4-83e0-4338166dd3ee",
+          "name": "Return watchlist search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/watchlist/searchall/:param",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "watchlist",
+                "searchall",
+                ":param"
+              ],
+              "variable": [
+                {
+                  "key": "param",
+                  "value": "{{param}}"
+                }
+              ]
+            },
+            "description": "Return watchlist search result\n\n### Response Class (Status 200)\n__{param}__ argument can be\n* artist first name\n* artist last name\n* artist username\n* movie title or\n\nFor more details on how watchlist are listed [see here][ref].\n[ref]: https://etmdb.com/en/movies/watchlist/id"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "4aa920a6-9612-48e4-8e6a-6dfb20843163",
+          "name": "Return watchlist search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/watchlist/search/:movie_title",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "watchlist",
+                "search",
+                ":movie_title"
+              ],
+              "variable": [
+                {
+                  "key": "movie_title",
+                  "value": "{{movie_title}}"
+                }
+              ]
+            },
+            "description": "Return watchlist search result\n\n### Response Class (Status 200)\n\n* __{movie_title}__: Used as a key word to search movies on watchlist\n* You can use both Amharic or English charset/font to search\n\nFor more details on how watchlist are listed [see here][ref].\n[ref]: https://etmdb.com/en/movies/watchlist/id"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "d0180c10-a4b1-44a9-836f-8471ac734398",
+          "name": "List all watchlist with user and movie instance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/watchlist/list/?page={{page}}&page_size={{page_size}}",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "watchlist",
+                "list",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "{{page}}"
+                },
+                {
+                  "key": "page_size",
+                  "value": "{{page_size}}"
+                }
+              ]
+            },
+            "description": "List all watchlist with user and movie instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "7adffdaa-7b9b-4e83-9943-65cc2a8ebe5d",
+          "name": "Retrieve watchlist instance of a user",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/watchlist/detail/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "watchlist",
+                "detail",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Retrieve watchlist instance of a user"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "771e3730-3e36-4ecd-a716-47c0c46195af",
+          "name": "Add new watchlist for a user instance to the database",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://etmdb.com/api/v1/watchlist/add/",
+            "description": "Add new watchlist for a user instance to the database"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "f8196967-6902-4bee-8661-e1cc0234ee16",
+          "name": "Update watchlist instance of a user",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/watchlist/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "watchlist",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update watchlist instance of a user"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "4a073ec3-5d8a-496c-b440-da22eff0b818",
+      "name": "Showtime",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "650b84f2-a29e-4444-99ac-ee3aa0687cef",
+          "name": "Add showtime instance",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://etmdb.com/api/v1/showtime/add/",
+            "description": "Add showtime instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "2f765800-a1f0-4e89-8c1a-576961b97bca",
+          "name": "Retrieve showtime instance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/showtime/detail/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "showtime",
+                "detail",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Retrieve showtime instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "f463ce3a-65ae-4b46-81d4-a15aa0cdfa89",
+          "name": "List all showtime instances",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/showtime/list/?page={{page}}&page_size={{page_size}}",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "showtime",
+                "list",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "{{page}}"
+                },
+                {
+                  "key": "page_size",
+                  "value": "{{page_size}}"
+                }
+              ]
+            },
+            "description": "List all showtime instances"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ffd7d78c-5b84-443c-85a7-00ad38db54b9",
+          "name": "Return showtime search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/showtime/searchall/:param",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "showtime",
+                "searchall",
+                ":param"
+              ],
+              "variable": [
+                {
+                  "key": "param",
+                  "value": "{{param}}"
+                }
+              ]
+            },
+            "description": "Return showtime search result\n\n### Response Class (Status 200)\n__{param}__ argument can be\n* show time or\n* day of the week [Mon=1, Tue=2, Wed=3, Thu=4, Fri=5, Sat=6, Sun=7]\n\nFor more details about showtime, check each cinema from the cinema list [see here][ref].\n[ref]: https://etmdb.com/en/movie-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "fd54cd88-6660-4ad9-9b28-435cff8a1aba",
+          "name": "Update showtime instance",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/showtime/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "showtime",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update showtime instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "6acb0832-11fa-4179-9672-9780b57e0951",
+          "name": "Update showtime instance",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/showtime/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "showtime",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update showtime instance"
+          },
+          "response": []
+        }
+      ],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "9f5232cb-2141-490c-8f8d-724d1ac283a6",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "a0e7896c-3398-49d7-b519-62a4746d7c18",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_postman_id": "15665754-d5e5-4a69-b1b7-0f5f606c27a1",
+      "name": "Cast/Artist",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "f69c9437-9b1e-42e5-ba43-5b0938b5acbf",
+          "name": "Add new cast to the database",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://etmdb.com/api/v1/people/add",
+            "description": "Add new cast to the database"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "3aa99208-864b-4894-bed7-d9db46463973",
+          "name": "Retrieve cast details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "https://etmdb.com/api/v1/people/detail/5",
+            "description": "Retrieve cast details"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "884d17a8-fa30-45bc-b5b3-cfcc81aa216a",
+          "name": "List all casts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/people/list?page={{page}}&page_size={{page_size}}",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "people",
+                "list"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "{{page}}"
+                },
+                {
+                  "key": "page_size",
+                  "value": "{{page_size}}"
+                }
+              ]
+            },
+            "description": "List all casts"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "3296460d-4066-4c60-b1c0-c3f4d7f2a2a2",
+          "name": "Return cast search result",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": {
+                "accessToken": "XZczVy2AQCcnzORwNb1B7GAcrawY19",
+                "tokenType": "Bearer",
+                "addTokenTo": "header"
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "https://etmdb.com/api/v1/people/search/m",
+            "description": "Return cast search result\n\n### Response Class (Status 200)\n__{param}__ argument can be\n* artist first name\n* artist last name\n* artist username\n\nFor more details on how cast are listed [see here][ref].\n[ref]: https://etmdb.com/en/cast-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "771d9794-15dc-41bb-972f-820ffe9aa43f",
+          "name": "Update cast detail",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/people/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "people",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update cast detail"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "976d50c4-6649-46f4-9cef-db21cc74f460",
+          "name": "Update cast detail",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/people/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "people",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update cast detail"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "ef787b0c-a23d-4c91-ad9a-7a6c13b173ca",
+      "name": "News/Articles",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "36a7fd1a-ba2c-4dd8-9ef2-ff9b5747ac17",
+          "name": "Add new article or news to the database",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://etmdb.com/api/v1/news/add/",
+            "description": "Add new article or news to the database"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "39dcc981-3b98-4f0c-a328-9110c8b3dcf6",
+          "name": "Retrieve news or articles instance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/news/detail/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "news",
+                "detail",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Retrieve news or articles instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "0be307be-204b-4d60-b0a6-fface52ad2fc",
+          "name": "List all news and articles",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/news/list/?page={{page}}&page_size={{page_size}}",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "news",
+                "list",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "{{page}}"
+                },
+                {
+                  "key": "page_size",
+                  "value": "{{page_size}}"
+                }
+              ]
+            },
+            "description": "List all news and articles"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "a8bef3be-8e70-41c6-b2b3-1fe76700fee6",
+          "name": "Return news or article search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/news/search/:title",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "news",
+                "search",
+                ":title"
+              ],
+              "variable": [
+                {
+                  "key": "title",
+                  "value": "{{title}}"
+                }
+              ]
+            },
+            "description": "Return news or article search result\n\n### Response Class (Status 200)\n\n* __{title}__: Used as a key word to search news and articles,\n\nFor more details on how news & articles are listed [see here][ref].\n[ref]: https://etmdb.com/en/news-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ceca1b50-7822-4a6d-acf5-476e81aaa168",
+          "name": "Update news or article instance",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/news/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "news",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update news or article instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "48bf0001-b884-4a2e-a80f-1604ee4431ea",
+          "name": "Update news or article instance",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/news/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "news",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update news or article instance"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "d0ab84ed-be42-4c70-a799-c3ceeaa117e4",
+      "name": "Movie Cast",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "5fe99d82-29dd-446a-9ef1-eecec62c22ba",
+          "name": "Add new cast detail for a movie instance",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://etmdb.com/api/v1/movie-cast/add/",
+            "description": "Add new cast detail for a movie instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "7435036e-7d53-4687-9722-881deb2c7027",
+          "name": "Retrieve movie cast details of movie instance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/movie-cast/detail/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "movie-cast",
+                "detail",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Retrieve movie cast details of movie instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "e1ec4e8e-5151-4595-bb38-0bff1a0b7d66",
+          "name": "List all movie casts for each movie instances",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/movie-cast/list/?page={{page}}&page_size={{page_size}}",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "movie-cast",
+                "list",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "{{page}}"
+                },
+                {
+                  "key": "page_size",
+                  "value": "{{page_size}}"
+                }
+              ]
+            },
+            "description": "List all movie casts for each movie instances"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ceaf36e7-dc84-4a6f-874e-906ed358a73f",
+          "name": "Return movie cast search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/movie-cast/search/:movie_title",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "movie-cast",
+                "search",
+                ":movie_title"
+              ],
+              "variable": [
+                {
+                  "key": "movie_title",
+                  "value": "{{movie_title}}"
+                }
+              ]
+            },
+            "description": "Return movie cast search result\n\n### Response Class (Status 200)\n\n* __{movie_title}__: Used as a key word to search movie cast\n* You can use both Amharic or English charset/font to search\n\nFor more details on how movie casts are listed [see here][ref].\n[ref]: https://etmdb.com/en/movie-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "853910b4-8903-44f3-a225-3d04cf27ae13",
+          "name": "Return movie cast search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/movie-cast/searchall/:param",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "movie-cast",
+                "searchall",
+                ":param"
+              ],
+              "variable": [
+                {
+                  "key": "param",
+                  "value": "{{param}}"
+                }
+              ]
+            },
+            "description": "Return movie cast search result\n\n### Response Class (Status 200)\n__{param}__ argument can be\n* artist first name\n* artist last name\n* artist username\n* movie title or\n* character name\n\nFor more details on how movie casts are listed [see here][ref].\n[ref]: https://etmdb.com/en/movie-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "8fcda6c5-1397-48c6-93e5-55c1c24d0b8e",
+          "name": "Update cast detail for a movie instance",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/movie-cast/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "movie-cast",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update cast detail for a movie instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "26ac668d-0914-4464-b1ff-8b20248c1559",
+          "name": "Update cast detail for a movie instance",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/movie-cast/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "movie-cast",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update cast detail for a movie instance"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "9311bb58-42e9-4b61-8b3a-8a52844b91e5",
+      "name": "Media (Images & Videos)",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "4f93a0ae-1573-4cd9-a89d-86b73ed52fb5",
+          "name": "Add new media to the database",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://etmdb.com/api/v1/media/add/",
+            "description": "Add new media to the database"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "3a9b8ca9-591c-4487-8089-5efd2c6d6d50",
+          "name": "Retrieve media instance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/media/detail/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "media",
+                "detail",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Retrieve media instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "dd48f79f-4351-4c80-8dbf-d75465ecce4d",
+          "name": "List all medias",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/media/list/?page={{page}}&page_size={{page_size}}",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "media",
+                "list",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "{{page}}"
+                },
+                {
+                  "key": "page_size",
+                  "value": "{{page_size}}"
+                }
+              ]
+            },
+            "description": "List all medias"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "36919e1f-3df8-4649-94f9-c0a5956256a9",
+          "name": "Return movie media search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/media/search/:movie_title",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "media",
+                "search",
+                ":movie_title"
+              ],
+              "variable": [
+                {
+                  "key": "movie_title",
+                  "value": "{{movie_title}}"
+                }
+              ]
+            },
+            "description": "Return movie media search result\n\n### Response Class (Status 200)\n\n* __{movie_title}__: Used as a key word to search media for movies\n* You can use both Amharic or English charset/font to search\n\nFor more details on how media is listed [see here][ref].\n[ref]: https://etmdb.com/en/movie-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "2dc28cc4-8e89-4053-a5b7-7558bce31599",
+          "name": "Return cast media search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/media/searchall/:user",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "media",
+                "searchall",
+                ":user"
+              ],
+              "variable": [
+                {
+                  "key": "user",
+                  "value": "{{user}}"
+                }
+              ]
+            },
+            "description": "Return cast media search result\n\n### Response Class (Status 200)\n__{user}__ argument can be\n* artist first name\n* artist last name\n* artist username\n\nFor more details on how cast media is listed [see here][ref].\n[ref]: https://etmdb.com/en/cast-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "01e0de86-62aa-494d-a29f-47d3c5dad645",
+          "name": "Update media instance",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/media/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "media",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update media instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "e5b76883-09ca-46e9-8066-86e1e835dc0d",
+          "name": "Update media instance",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/media/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "media",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update media instance"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "0e5b3d4b-8a57-416b-8cbf-ae18db741646",
+      "name": "Jobs",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "1d2d2d70-97e2-4213-b440-adc9bac129d3",
+          "name": "Add new job listing to the database",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://etmdb.com/api/v1/job/add/",
+            "description": "Add new job listing to the database"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "e131abd5-692a-44f6-a000-6496709d41e2",
+          "name": "List all jobs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/job/list/?page={{page}}&page_size={{page_size}}",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "job",
+                "list",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "{{page}}"
+                },
+                {
+                  "key": "page_size",
+                  "value": "{{page_size}}"
+                }
+              ]
+            },
+            "description": "List all jobs"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "a7d65e4f-16c3-46c9-bd03-5ea3c9ad45f9",
+          "name": "Return job details search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/job/search/:job_title",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "job",
+                "search",
+                ":job_title"
+              ],
+              "variable": [
+                {
+                  "key": "job_title",
+                  "value": "{{job_title}}"
+                }
+              ]
+            },
+            "description": "Return job details search result\n\n### Response Class (Status 200)\n\n* __{job_title}__: Used as a key word to search jobs,\n\nFor more details on how job are listed [see here][ref].\n[ref]: https://etmdb.com/en/job-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "88b97138-7cc1-48c4-87ff-c670f3dffc34",
+          "name": "Return job details search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/job/searchall/:company_name",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "job",
+                "searchall",
+                ":company_name"
+              ],
+              "variable": [
+                {
+                  "key": "company_name",
+                  "value": "{{company_name}}"
+                }
+              ]
+            },
+            "description": "Return job details search result\n\n### Response Class (Status 200)\n\n* __{company_name}__: Used as a key word to search jobs,\n\nFor more details on how job are listed [see here][ref].\n[ref]: https://etmdb.com/en/job-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "27cde2c5-bbaf-4c85-a592-84fb715c5912",
+          "name": "Update job description instance",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/job/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "job",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update job description instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "43305b14-44f6-47e9-a0a3-63e241bcfdc7",
+          "name": "Update job description instance",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/job/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "job",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update job description instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "adaef28e-c01d-4cb0-9b10-e1f347786255",
+          "name": "Retrieve job description instance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/job/detail/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "job",
+                "detail",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Retrieve job description instance"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "576d5d4b-b85e-49c9-8fde-e820b4aaf918",
+      "name": "Movie genre",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "f25de7bb-61d9-481b-9025-bc3462c649c8",
+          "name": "Add new genre type to an existing movie",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://etmdb.com/api/v1/genre/add/",
+            "description": "Add new genre type to an existing movie"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "bffb52c3-03a0-4d2f-a245-8402ce9bc50a",
+          "name": "Retrieve movie instance with genre types",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/genre/detail/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "genre",
+                "detail",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Retrieve movie instance with genre types"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "01d35a28-df58-4843-982f-9b5aee248a95",
+          "name": "List all movies with their genre types",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/genre/list/?page={{page}}&page_size={{page_size}}",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "genre",
+                "list",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "{{page}}"
+                },
+                {
+                  "key": "page_size",
+                  "value": "{{page_size}}"
+                }
+              ]
+            },
+            "description": "List all movies with their genre types"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ce08d1d3-4e31-408d-ad46-e46758e30328",
+          "name": "Return movie genre search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/genre/search/:movie_title",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "genre",
+                "search",
+                ":movie_title"
+              ],
+              "variable": [
+                {
+                  "key": "movie_title",
+                  "value": "{{movie_title}}"
+                }
+              ]
+            },
+            "description": "Return movie genre search result\n\n### Response Class (Status 200)\n\n* __{movie_title}__: Used as a key word to search movie genres\n* You can use both Amharic or English charset/font to search\n\nFor more details on how movies are listed [see here][ref].\n[ref]: https://etmdb.com/en/movie-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ec772668-77d4-41df-8505-85bd61c170f2",
+          "name": "Return movie genre search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/genre/searchall/:movie_genre_type",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "genre",
+                "searchall",
+                ":movie_genre_type"
+              ],
+              "variable": [
+                {
+                  "key": "movie_genre_type",
+                  "value": "{{movie_genre_type}}"
+                }
+              ]
+            },
+            "description": "Return movie genre search result\n\n### Response Class (Status 200)\n\n* __{movie_genre_type}__: Used as a key word to search movie genres\n\nFor more details on how movies are listed [see here][ref].\n[ref]: https://etmdb.com/en/movie-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "046d3f57-eb63-4c3e-ad74-dd0cd63d720a",
+          "name": "Update movie genre type for movie instance",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/genre/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "genre",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update movie genre type for movie instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "6e148ca7-b1d9-4ddb-9ed2-7d9b1f95cba2",
+          "name": "Update movie genre type for movie instance",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/genre/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "genre",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update movie genre type for movie instance"
+          },
+          "response": []
+        }
+      ],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "8c0ea397-e7ba-439f-b1a2-622e33ad0679",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "686bd664-dead-48fe-aba8-2b35b31c7670",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_postman_id": "4d1804a8-d809-428a-b574-671756fca8e7",
+      "name": "Genre type",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "d1e5842f-453c-4878-b084-10641b5095d0",
+          "name": "Add new genre type to the database",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://etmdb.com/api/v1/genre-type/add/",
+            "description": "Add new genre type to the database"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ab7af2d1-9566-4ef2-bf95-9746a61ab14a",
+          "name": "Retrieve genre type",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/genre-type/detail/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "genre-type",
+                "detail",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Retrieve genre type"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "c9aa3357-46a6-4e05-8392-e966419fa406",
+          "name": "List all genre types",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/genre-type/list/?page={{page}}&page_size={{page_size}}",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "genre-type",
+                "list",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "{{page}}"
+                },
+                {
+                  "key": "page_size",
+                  "value": "{{page_size}}"
+                }
+              ]
+            },
+            "description": "List all genre types"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ba9628f0-90fe-4d32-9e0a-36f85c6e7e8d",
+          "name": "Return genre type search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/genre-type/search/:genre_description",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "genre-type",
+                "search",
+                ":genre_description"
+              ],
+              "variable": [
+                {
+                  "key": "genre_description",
+                  "value": "{{genre_description}}"
+                }
+              ]
+            },
+            "description": "Return genre type search result\n\n### Response Class (Status 200)\n\n* __{genre_description}__: Used as a key word to search genre types\n\nFor more details on how genre types are listed [see here][ref].\n[ref]: https://etmdb.com/en/movie-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "e103438d-62bd-4439-ab33-a4658059662b",
+          "name": "Update genre type",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/genre-type/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "genre-type",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update genre type"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "0654e893-3cc6-477b-b6b1-258d45bd4de5",
+          "name": "Update genre type",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/genre-type/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "genre-type",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update genre type"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "1b305cf8-1de6-4f93-9752-6b3749d10ff8",
+      "name": "Company",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "2e4e1507-908b-43bd-bf6c-a2d2fa34a77a",
+          "name": "Add new company to the database",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://etmdb.com/api/v1/company/add",
+            "description": "Add new company to the database"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "54412658-a9de-4de9-a4c4-b5b843b9b2ba",
+          "name": "Retrieve company instance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/company/detail/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "company",
+                "detail",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Retrieve company instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "92c3d823-33a8-4601-b354-2d55dc0e7390",
+          "name": "List all companies",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/company/list?page={{page}}&page_size={{page_size}}",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "company",
+                "list"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "{{page}}"
+                },
+                {
+                  "key": "page_size",
+                  "value": "{{page_size}}"
+                }
+              ]
+            },
+            "description": "List all companies"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "8ee55c96-3e85-44ee-a59f-596e82f4474f",
+          "name": "Return company search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/company/search/:company_name",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "company",
+                "search",
+                ":company_name"
+              ],
+              "variable": [
+                {
+                  "key": "company_name",
+                  "value": "{{company_name}}"
+                }
+              ]
+            },
+            "description": "Return company search result\n\n### Response Class (Status 200)\n\n* __{company_name}__: Used as a key word to search companies,\n\nFor more details on how companies are listed [see here][ref].\n[ref]: https://etmdb.com/en/company-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "e2e3c0e5-6f95-4b87-886a-42437256076c",
+          "name": "Update company instance",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/company/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "company",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update company instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "abc9088a-5304-4bf5-a24c-0c5f6e7af2ac",
+          "name": "Update company instance",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/company/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "company",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update company instance"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "0790789a-0f83-4566-aa31-0acda6f1865b",
+      "name": "Filmography",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "e9af08c7-d4b0-4063-a651-7a742f025965",
+          "name": "Add new filmography detail for a movie to the database",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://etmdb.com/api/v1/filmography/add/",
+            "description": "Add new filmography detail for a movie to the database"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "3e13e675-1085-4288-a9b8-b7fee78eaba3",
+          "name": "Retrieve filmography details movie instance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/filmography/detail/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "filmography",
+                "detail",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Retrieve filmography details movie instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ec837901-2850-434d-ae0a-aec5eabedd03",
+          "name": "List all filmography details for each movie instances",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/filmography/list/?page={{page}}&page_size={{page_size}}",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "filmography",
+                "list",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "{{page}}"
+                },
+                {
+                  "key": "page_size",
+                  "value": "{{page_size}}"
+                }
+              ]
+            },
+            "description": "List all filmography details for each movie instances"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "d9feb09c-3949-4e6c-aac4-8a280355c076",
+          "name": "Return filmography search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/filmography/search/:movie_title",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "filmography",
+                "search",
+                ":movie_title"
+              ],
+              "variable": [
+                {
+                  "key": "movie_title",
+                  "value": "{{movie_title}}"
+                }
+              ]
+            },
+            "description": "Return filmography search result\n\n### Response Class (Status 200)\n\n* __{movie_title}__: Used as a key word to search movies\n* You can use both Amharic or English charset/font to search\n\nFor more details on how filmographies are listed [see here][ref].\n[ref]: https://etmdb.com/en/movie-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "e9453f5c-f905-42c9-b370-9e84cfe55cd2",
+          "name": "Return filmography search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/filmography/searchall/:param",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "filmography",
+                "searchall",
+                ":param"
+              ],
+              "variable": [
+                {
+                  "key": "param",
+                  "value": "{{param}}"
+                }
+              ]
+            },
+            "description": "Return filmography search result\n\n### Response Class (Status 200)\n__{param}__ argument can be\n* artist first name\n* artist last name\n* artist username\n* movie title or\n* filmography description (such as director, actor, producer, etc)\n\nFor more details on how filmographies are listed [see here][ref].\n[ref]: https://etmdb.com/en/movie-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "81e54967-3e53-4d79-9c15-890f7b37467b",
+          "name": "Update filmography detail for a movie instance",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/filmography/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "filmography",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update filmography detail for a movie instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "290f2e9e-1ffc-433e-a288-2d047ba39c67",
+          "name": "Update filmography detail for a movie instance",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/filmography/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "filmography",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update filmography detail for a movie instance"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "5262cd66-72ac-4a0f-a5bc-4579c6b7bba8",
+      "name": "Cinema schedule",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "3c7466c2-7428-4bf2-b430-0179970e3fb5",
+          "name": "Add cinema schedule instance",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://etmdb.com/api/v1/cinema-schedule/add/",
+            "description": "Add cinema schedule instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "5b70b7ca-8fce-4af0-be43-83da3d0d8f16",
+          "name": "Retrieve cinema schedule instance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema-schedule/detail/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema-schedule",
+                "detail",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Retrieve cinema schedule instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "98945d35-a22b-4d95-9aa1-5e07aa14340e",
+          "name": "List all cinema schedule instances",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema-schedule/list/?page={{page}}&page_size={{page_size}}",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema-schedule",
+                "list",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "{{page}}"
+                },
+                {
+                  "key": "page_size",
+                  "value": "{{page_size}}"
+                }
+              ]
+            },
+            "description": "List all cinema schedule instances"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "8085e375-5440-4efd-9d48-24c0162da01b",
+          "name": "Return cinema schedule search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema-schedule/search/:movie_title",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema-schedule",
+                "search",
+                ":movie_title"
+              ],
+              "variable": [
+                {
+                  "key": "movie_title",
+                  "value": "{{movie_title}}"
+                }
+              ]
+            },
+            "description": "Return cinema schedule search result\n\n### Response Class (Status 200)\n\n* __{movie_title}__: Used as a key word to search movie cast\n* You can use both Amharic or English charset/font to search\n\nFor more details about cinema schedule, check each cinema from the cinema list [see here][ref].\n[ref]: https://etmdb.com/en/movie-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "17114d22-fe09-42d7-9dad-cbf04c2c6834",
+          "name": "Return cinema schedule search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema-schedule/searchall/:param",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema-schedule",
+                "searchall",
+                ":param"
+              ],
+              "variable": [
+                {
+                  "key": "param",
+                  "value": "{{param}}"
+                }
+              ]
+            },
+            "description": "Return cinema schedule search result\n\n### Response Class (Status 200)\n__{param}__ argument can be\n* movie title\n* cinema name\n* cinema hall name or\n* cinema technology\n\nFor more details about cinema schedule, check each cinema from the cinema list [see here][ref].\n[ref]: https://etmdb.com/en/movie-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "eb453cd5-ff93-43bd-a078-11d836521df8",
+          "name": "Update cinema schedule instance",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema-schedule/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema-schedule",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update cinema schedule instance"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "8590fa1a-23df-4581-b475-57e57edf1300",
+          "name": "Update cinema schedule instance",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/cinema-schedule/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "cinema-schedule",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update cinema schedule instance"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "c5212baf-a248-4899-af5b-7e423cbfab3b",
+      "name": "Filmography type",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "7e5f7a8f-d869-4290-a916-0bfe66ff3759",
+          "name": "Add new filmography type to the database",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://etmdb.com/api/v1/filmography-type/add/",
+            "description": "Add new filmography type to the database"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "b77bfb48-9b5a-4e95-ae3d-4a84e5563cdf",
+          "name": "Retrieve filmography type",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/filmography-type/detail/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "filmography-type",
+                "detail",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Retrieve filmography type"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "c57e8620-840c-43b7-b3d9-5a24e260f5dd",
+          "name": "List all filmography types",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/filmography-type/list/?page={{page}}&page_size={{page_size}}",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "filmography-type",
+                "list",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "{{page}}"
+                },
+                {
+                  "key": "page_size",
+                  "value": "{{page_size}}"
+                }
+              ]
+            },
+            "description": "List all filmography types"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "0eeb24b7-ddf8-4702-a34b-262b908109dc",
+          "name": "Return filmography type search result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://etmdb.com/api/v1/filmography-type/search/:filmography_description",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "filmography-type",
+                "search",
+                ":filmography_description"
+              ],
+              "variable": [
+                {
+                  "key": "filmography_description",
+                  "value": "{{filmography_description}}"
+                }
+              ]
+            },
+            "description": "Return filmography type search result\n\n### Response Class (Status 200)\n\n* __{filmography_description}__: Used as a key word to search filmography types\n\nFor more details on how filmography types are listed [see here][ref].\n[ref]: https://etmdb.com/en/movie-list/-updated_date"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "98b3b28d-c8ee-47f1-a893-930367107cc1",
+          "name": "Update filmography type",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/filmography-type/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "filmography-type",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update filmography type"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "d61bb4ec-0093-4677-b243-3148f5368da3",
+          "name": "Update filmography type",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://etmdb.com/api/v1/filmography-type/update/:id",
+              "protocol": "https",
+              "host": [
+                "etmdb",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "filmography-type",
+                "update",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{id}}"
+                }
+              ]
+            },
+            "description": "Update filmography type"
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
