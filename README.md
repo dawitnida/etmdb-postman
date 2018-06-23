@@ -9,7 +9,7 @@ This repo is a placeholder to maintain EtMDB REST API Postman Collection. See up
 
 Please follow this tutorial to import this [Postman Collection](https://www.getpostman.com/docs/collections).
 
-![Alt Text](https://github.com/etmdb/etmdb-postman/Images/blob/master/Postman-etmdb.gif)
+![Alt Text](https://github.com/etmdb/etmdb-postman/blob/master/Images/Postman-etmdb.gif)
 
 ![Postman](Images/etmdb-api-postman-collection.JPG)
 
