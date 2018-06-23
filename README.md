@@ -1,6 +1,6 @@
 EtMDB-Postman Collection
 ========================================
-Postman Collection for [EtMDB](https://etmdb.com) (Ethiopian Movie Database)
+Postman Collection for [EtMDB API](https://etmdb.com) (Ethiopian Movie Database)
 
 This repo is a placeholder to maintain EtMDB REST API Postman Collection. See uploaded file.
 
