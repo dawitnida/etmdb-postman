@@ -28,4 +28,4 @@ Please follow this tutorial to import this [Postman Collection](https://www.getp
 
 Let's write our movie history together. (የሃገራችንን ፊልም ታሪክ በጋራ እንፃፍ)
 
-© 2019 [EtMDB](https://etmdb.com)
+© 2020 [EtMDB](https://etmdb.com)
